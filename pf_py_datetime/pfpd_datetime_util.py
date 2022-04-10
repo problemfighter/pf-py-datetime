@@ -5,8 +5,10 @@ from math import floor
 class PFPDDatetimeUtil:
 
     @staticmethod
-    def difference_min_hour_day_full(previous: datetime, current: datetime = datetime.now(), str_format="%d %B %Y at %I:%M %p") -> str:
+    def difference_min_hour_day_full(previous: datetime, current: datetime = None, str_format="%d %B %Y at %I:%M %p") -> str:
         date_time = "1m"
+        if not current:
+            current = datetime.now()
         if previous:
             difference = current - previous
             seconds = difference.total_seconds()
