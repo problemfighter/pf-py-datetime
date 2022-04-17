@@ -1,0 +1,13 @@
+class DateTimeData:
+    day: int
+    month: int
+    monthName: str
+    year: int
+    hour24: str
+    hour12: str
+    minute: int
+    second: int
+    weekday: str
+    amPm: str
+    dayOfYear: str
+    weekOfYear: str

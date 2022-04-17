@@ -10,5 +10,21 @@ def test1():
     print(response)
 
 
+def date_time_split():
+    date_time_data = PFPDDatetimeUtil.data_time_split()
+    print("Day : " + str(date_time_data.day))
+    print("Month : " + str(date_time_data.month))
+    print("Month Name : " + str(date_time_data.monthName))
+    print("Year : " + str(date_time_data.year))
+    print("Hour 24 : " + str(date_time_data.hour24))
+    print("Hour 12 : " + str(date_time_data.hour12))
+    print("Minute : " + str(date_time_data.minute))
+    print("Second : " + str(date_time_data.second))
+    print("AM PM : " + str(date_time_data.amPm))
+    print("Day of Year : " + str(date_time_data.dayOfYear))
+    print("Week of Year : " + str(date_time_data.weekOfYear))
+
+
 if __name__ == '__main__':
-    test1()
+    date_time_split()
+    # test1()
