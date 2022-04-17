@@ -25,6 +25,12 @@ def date_time_split():
     print("Week of Year : " + str(date_time_data.weekOfYear))
 
 
+def time_manipulation():
+    response = PFPDDatetimeUtil.time_manipulation("04:20:00", minute=60, return_time_format="%I:%M")
+    print(response)
+
+
 if __name__ == '__main__':
-    date_time_split()
+    time_manipulation()
+    # date_time_split()
     # test1()

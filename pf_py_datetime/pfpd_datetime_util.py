@@ -51,3 +51,9 @@ class PFPDDatetimeUtil:
         date_time_data.weekOfYear = date_difference.strftime("%W")
 
         return date_time_data
+
+    @staticmethod
+    def time_manipulation(time: str, source_time_format="%I:%M:%S", return_time_format="%I:%M:%S", hour=0, minute=0, second=0):
+        parsed_time = datetime.strptime(time, source_time_format)
+        diff = parsed_time + timedelta(hours=hour, minutes=minute, seconds=second)
+        return diff.strftime(return_time_format)
